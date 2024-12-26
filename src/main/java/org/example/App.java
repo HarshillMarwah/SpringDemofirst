@@ -14,16 +14,17 @@ public class App
         System.out.println( "Hello World!" );
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        //Alien obj = new Alien();
-//        Alien obj = (Alien) context.getBean("alien",Alien.class);
+        //Alien obj1 = new Alien();
         String[] beanNames = context.getBeanDefinitionNames();
 
         // Print all the bean names
         for (String beanName : beanNames) {
             System.out.println(beanName);
         }
-        Alien obj = (Alien) context.getBean("org.example.Alien#0");
+        Alien obj = (Alien) context.getBean("alien",Alien.class);// getting bean with ID:1
+        Alien obj1 = (Alien) context.getBean("org.example.Alien#0");// getting bean without ID.
         obj.code();
+        obj1.code();
 
     }
 }
