@@ -4,13 +4,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="org.example.Alien">
-
+    <bean id="alien" class="org.example.Alien" >
+        <property name="age" value="21"></property>
     </bean>
-    <bean class="org.example.Alien">
+<!--    <bean class="org.example.Alien">-->
 
-    </bean>
-    <bean class="org.example.Alien">
+<!--    </bean>-->
+    <bean id="alien2" class="org.example.Alien" scope="prototype">
 
     </bean>
 
