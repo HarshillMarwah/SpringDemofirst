@@ -7,7 +7,7 @@
 
     </bean>
     <!-- bean definitions here -->
-    <bean id="alien" class="org.example.Alien"  autowire="byName">
+    <bean id="alien" class="org.example.Alien"  autowire="byType">
 <!--        <constructor-arg index="1" value="21"/>-->
 <!--        <constructor-arg index="0" ref="laptop11"/>-->
         <property name="age" value="21"/>
@@ -17,10 +17,10 @@
 
 <!--    </bean>-->
 
-    <bean id="laptop11" class="org.example.Laptop" >
+    <bean id="laptop11" class="org.example.Laptop" primary="true">
 
     </bean>
-    <bean id="com" class="org.example.Desktop" >
+    <bean id="com" class="org.example.Desktop">
 
     </bean>
 
