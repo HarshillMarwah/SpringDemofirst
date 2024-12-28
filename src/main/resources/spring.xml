@@ -17,10 +17,10 @@
 
 <!--    </bean>-->
 
-    <bean id="laptop11" class="org.example.Laptop" primary="true">
+    <bean id="laptop11" class="org.example.Laptop" >
 
     </bean>
-    <bean id="com" class="org.example.Desktop">
+    <bean id="com" class="org.example.Desktop" lazy-init="true" primary="true">
 
     </bean>
 

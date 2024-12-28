@@ -39,5 +39,6 @@ public class App
 //        System.out.println("testing this.age");
 //        Alien con=new Alien(21);
 
+        Desktop lazyTry = (Desktop)context.getBean("com");
     }
 }
