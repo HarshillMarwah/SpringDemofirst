@@ -34,6 +34,10 @@ public class App
         //Testing Dependency Injection
         Alien obj = (Alien) context.getBean("alien",Alien.class);
         System.out.println(obj.getAge());
+        obj.code();
+
+//        System.out.println("testing this.age");
+//        Alien con=new Alien(21);
 
     }
 }

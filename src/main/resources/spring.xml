@@ -3,14 +3,21 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="alien2" class="org.example.Alien" scope="prototype">
+
+    </bean>
     <!-- bean definitions here -->
     <bean id="alien" class="org.example.Alien" >
-        <property name="age" value="21"></property>
+        <constructor-arg index="1" value="21"/>
+        <constructor-arg index="0" ref="laptop11"/>
+<!--        <property name="age" value="21"></property>-->
+<!--        <property name="lap" ref="laptop11"/>-->
     </bean>
 <!--    <bean class="org.example.Alien">-->
 
 <!--    </bean>-->
-    <bean id="alien2" class="org.example.Alien" scope="prototype">
+
+    <bean id="laptop11" class="org.example.Laptop" >
 
     </bean>
 
