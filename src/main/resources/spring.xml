@@ -7,10 +7,10 @@
 
     </bean>
     <!-- bean definitions here -->
-    <bean id="alien" class="org.example.Alien" >
-        <constructor-arg index="1" value="21"/>
-        <constructor-arg index="0" ref="laptop11"/>
-<!--        <property name="age" value="21"></property>-->
+    <bean id="alien" class="org.example.Alien"  autowire="byName">
+<!--        <constructor-arg index="1" value="21"/>-->
+<!--        <constructor-arg index="0" ref="laptop11"/>-->
+        <property name="age" value="21"/>
 <!--        <property name="lap" ref="laptop11"/>-->
     </bean>
 <!--    <bean class="org.example.Alien">-->
@@ -18,6 +18,9 @@
 <!--    </bean>-->
 
     <bean id="laptop11" class="org.example.Laptop" >
+
+    </bean>
+    <bean id="com" class="org.example.Desktop" >
 
     </bean>
 

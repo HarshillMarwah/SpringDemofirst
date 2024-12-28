@@ -1,34 +1,35 @@
 package org.example;
 
 public class Alien {
-    private int age=5;
-    private Laptop lap;
-    public Alien(){
-       // age=0;
-        System.out.println("Alien OBJ created; age="+age);
+    private int age = 5;
+    private Computer com;
+
+    public Alien() {
+        // age=0;
+        //System.out.println("Alien OBJ created; age=" + age);
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public Alien(Laptop lap, int age) {
-        this.lap = lap;
+    public Alien(Computer com, int age) {
+        this.com = com;
         this.age = age;
     }
 
     public Alien(int age) {
-        System.out.println("this.age="+this.age);
-        System.out.println("age="+age);
+        System.out.println("this.age=" + this.age);
+        System.out.println("age=" + age);
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public void code() {
+        System.out.println("In function code.");
+        com.compile();
+        // lap.compile();
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    //Getters and Setters
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
@@ -36,9 +37,11 @@ public class Alien {
         this.age = age;
     }
 
-    public void code()
-    {
-        System.out.println("In function code.");
-       // lap.compile();
+    public Computer getCom() {
+        return com;
+    }
+
+    public void setCom(Computer com) {
+        this.com = com;
     }
 }
