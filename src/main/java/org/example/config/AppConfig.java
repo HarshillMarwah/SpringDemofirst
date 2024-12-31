@@ -5,15 +5,13 @@ import org.example.Computer;
 import org.example.Desktop;
 import org.example.Laptop;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@ComponentScan("org.example")
 public class AppConfig {
 //    @Bean(name = "yellow")
-    @Bean
+   /* @Bean
     public Alien alien1( Computer com){//@Qualifier("laptop1")
         Alien obj = new Alien();
         obj.setAge(25);
@@ -30,5 +28,5 @@ public class AppConfig {
     public Desktop desktop(){
         System.out.println("From config class");
         return new Desktop();
-    }
+    }*/
 }
