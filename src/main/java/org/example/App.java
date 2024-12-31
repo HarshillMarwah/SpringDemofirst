@@ -15,8 +15,16 @@ public class App
     {
         System.out.println( "Hello World!" );
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Desktop dt = context.getBean("yellow",Desktop.class);
+        Alien obj1 = (Alien) context.getBean("alien1");
+//    	obj1.setAge(21);
+        System.out.println(obj1.getAge());
+        obj1.code();
+//        System.out.println(obj1.code());
+
+        Desktop dt = context.getBean(Desktop.class);
         dt.compile();
+        Desktop dt1 = context.getBean(Desktop.class);
+        dt1.compile();
 
        /* ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         //Alien obj1 = new Alien();
